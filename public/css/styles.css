@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.column {
+    margin: 0 40px; /* 左右のマージンを設定 */
+}
+
+.form-container {
+    max-width: 400px; /* 最大幅を設定 */
+    margin: 0 auto; /* 中央に配置 */
+    padding: 20px; /* 内側の余白 */
+    border: 1px solid #ccc; /* 枠線 */
+    border-radius: 5px; /* 角を丸く */
+    background-color: #f9f9f9; /* 背景色 */
+}
+
+.form-group {
+    margin-bottom: 15px; /* 各フォームグループの下に余白 */
+}
+
+label {
+    display: block; /* ラベルをブロック要素に */
+    margin-bottom: 5px; /* ラベルの下に余白 */
+}
+
+input[type="text"],
+select {
+    width: 100%; /* 幅を100%に */
+    padding: 8px; /* 内側の余白 */
+    border: 1px solid #ccc; /* 枠線 */
+    border-radius: 4px; /* 角を丸く */
+}
+
+.btn {
+    background-color: #007bff; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    padding: 10px 15px; /* 内側の余白 */
+    border: none; /* 枠線をなしに */
+    border-radius: 4px; /* 角を丸く */
+    cursor: pointer; /* カーソルをポインタに */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+/* ボタンコンテナのスタイル */
+.button-container-delete {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    align-items: flex-end; /* 左揃え */
+}
+
+/* ボタンのスタイル */
+.button-container-delete button {
+    margin: 5px 0; /* ボタンの上下にマージンを追加 */
+    padding: 2px 5px; /* ボタンのパディングを統一 */
+    background-color: #ff1000; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    border: none; /* ボタンの枠線を削除 */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    cursor: pointer; /* カーソルをポインタに */
+    transition: background-color 0.3s; /* ホバー時のトランジション */
+}
+
+.button-container-delete button:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+
