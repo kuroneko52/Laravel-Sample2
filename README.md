@@ -65,13 +65,19 @@ Laravelを使ったWebアプリケーションの基本的な構造と実装例�
 7. Build
 
    ```
-   npm run dev
+   npm run build
    ```
 
-8. Start the server
+8. Start the Server
 
    ```
    php artisan serve
+   ```
+
+9. Start the Dev Server
+
+   ```
+   npm run dev
    ```
 
 ## Treatment
@@ -107,12 +113,12 @@ npm コマンドが使えなくなってこんなエラーが出たら
    peer vite@"^4.0.0 || ^5.0.0" from @vitejs/plugin-vue@4.6.2
    ```
 
-@vitejs/plugin-vueのバージョンをアップするか、こんなエラーが出てたらviteのバージョンを下げて
+@vitejs/plugin-vueのバージョンをアップ(推奨)するか、viteのバージョンを下げる
 
    ```
-   Upgrade @vitejs/plugin-vue
+   Upgrade vite & @vitejs/plugin-vue
 
-   $ npm install vite@latest @vitejs/plugin-vue@latest --save-dev
+   $ npm install vite@latest @vitejs/plugin-vue@latest
    ```
 
 or
@@ -120,7 +126,13 @@ or
    ```
    Downgrade vite
    
-   $ npm install vite@^5.0.0 --save-dev
+   $ npm install vite@^5.0.0
+   ```
+
+開発環境だけに適応させる末尾オプション
+
+   ```
+   --save-dev
    ```
 
 node_modules/ フォルダーと package-lock.json を削除して npm install で依存解決
@@ -143,6 +155,10 @@ node_modules/ フォルダーと package-lock.json を削除して npm install �
    ```
 
    Edit Database Settings
+
+important
+
+.gitignoreに.env.testingがあることを確認
 
 ### Test Commands
 
