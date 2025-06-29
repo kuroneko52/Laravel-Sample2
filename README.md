@@ -86,7 +86,7 @@ Laravelを使ったWebアプリケーションの基本的な構造と実装例�
 
 ## Troubleshooting
 
-npm コマンドが使えなくなってこんなエラーが出たら
+`npm` コマンドが使えなくなってこんなエラーが出たら
 
    ```
    $ npm run build
@@ -149,7 +149,7 @@ or
 
 1. Create Test Database
 
-2. Create .env.testing
+2. Create `.env.testing`
 
    ```
    cp .env .env.testing
@@ -157,7 +157,7 @@ or
 
    Edit Database Settings
 
-### important
+### Important
 
 `.gitignore` に `.env.testing` があることを確認
 
