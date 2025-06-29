@@ -113,7 +113,7 @@ npm コマンドが使えなくなってこんなエラーが出たら
    peer vite@"^4.0.0 || ^5.0.0" from @vitejs/plugin-vue@4.6.2
    ```
 
-@vitejs/plugin-vueのバージョンをアップ(推奨)するか、viteのバージョンを下げる
+`@vitejs/plugin-vue` のバージョンをアップ(推奨)するか、`vite` のバージョンを下げる
 
    ```
    Upgrade vite & @vitejs/plugin-vue
@@ -135,7 +135,8 @@ or
    --save-dev
    ```
 
-node_modules/ フォルダーと package-lock.json を削除して npm install で依存解決
+`node_modules/`  フォルダーと `package-lock.json` を削除して `npm install` で依存解決
+
    ```
    rm -rf node_modules package-lock.json
 
@@ -156,9 +157,9 @@ node_modules/ フォルダーと package-lock.json を削除して npm install �
 
    Edit Database Settings
 
-important
+### important
 
-.gitignoreに.env.testingがあることを確認
+`.gitignore` に `.env.testing` があることを確認
 
 ### Test Commands
 
