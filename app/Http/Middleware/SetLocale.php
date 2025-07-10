@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\App;
+use App\Http\Controller\LocaleController;
 
 class SetLocale
 {
@@ -15,6 +17,12 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
+        // セッションからロケールを取得し、デフォルト値を設定
+        $locale = session('app_locale', config('app.locale'));
+
+        // アプリケーションのロケールを設定
+        App::setLocale($locale);
+
         return $next($request);
     }
 }
