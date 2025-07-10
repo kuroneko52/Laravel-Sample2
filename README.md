@@ -65,13 +65,19 @@ Laravelを使ったWebアプリケーションの基本的な構造と実装例�
 7. Build
 
    ```
-   npm run dev
+   npm run build
    ```
 
-8. Start the server
+8. Start the Server
 
    ```
    php artisan serve
+   ```
+
+9. Start the Dev Server
+
+   ```
+   npm run dev
    ```
 
 ## Treatment
@@ -80,7 +86,7 @@ Laravelを使ったWebアプリケーションの基本的な構造と実装例�
 
 ## Troubleshooting
 
-npm コマンドが使えなくなってこんなエラーが出たら
+`npm` コマンドが使えなくなってこんなエラーが出たら
 
    ```
    $ npm run build
@@ -107,12 +113,12 @@ npm コマンドが使えなくなってこんなエラーが出たら
    peer vite@"^4.0.0 || ^5.0.0" from @vitejs/plugin-vue@4.6.2
    ```
 
-@vitejs/plugin-vueのバージョンをアップするか、こんなエラーが出てたらviteのバージョンを下げて
+`@vitejs/plugin-vue` のバージョンをアップ(推奨)するか、`vite` のバージョンを下げる
 
    ```
-   Upgrade @vitejs/plugin-vue
+   Upgrade vite & @vitejs/plugin-vue
 
-   $ npm install vite@latest @vitejs/plugin-vue@latest --save-dev
+   $ npm install vite@latest @vitejs/plugin-vue@latest
    ```
 
 or
@@ -120,10 +126,17 @@ or
    ```
    Downgrade vite
    
-   $ npm install vite@^5.0.0 --save-dev
+   $ npm install vite@^5.0.0
    ```
 
-node_modules/ フォルダーと package-lock.json を削除して npm install で依存解決
+開発環境だけに適応させる末尾オプション
+
+   ```
+   --save-dev
+   ```
+
+`node_modules/`  フォルダーと `package-lock.json` を削除して `npm install` で依存解決
+
    ```
    rm -rf node_modules package-lock.json
 
@@ -136,13 +149,17 @@ node_modules/ フォルダーと package-lock.json を削除して npm install �
 
 1. Create Test Database
 
-2. Create .env.testing
+2. Create `.env.testing`
 
    ```
    cp .env .env.testing
    ```
 
    Edit Database Settings
+
+### Important
+
+`.gitignore` に `.env.testing` があることを確認
 
 ### Test Commands
 
