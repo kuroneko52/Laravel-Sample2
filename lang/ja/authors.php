@@ -1,10 +1,12 @@
 <?php
 
 return [
-    'bookslist' => '本一覧',
-    'authorslist' => '作者一覧',
+    'bookslist' => '本の一覧',
+    'authorslist' => '作者の一覧',
     'edit' => '編集',
     'delete' => '削除',
+    'addbooklink' => '本を追加',
+    'addauthorlink' => '作者を追加',
     'addbook' => '本の追加',
     'addauthor' => '作者の追加',
     'editbook' => '本の編集',
@@ -16,8 +18,4 @@ return [
     'update' => '更新',
     'backtobookslist' => '本一覧へ戻る',
     'backtoauthorslist' => '作者一覧へ戻る',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
 ];

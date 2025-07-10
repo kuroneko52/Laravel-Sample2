@@ -5,6 +5,8 @@ return [
     'authorslist' => 'Authors List',
     'edit' => 'Edit',
     'delete' => 'Delete',
+    'addbooklink' => 'Add Book',
+    'addauthorlink' => 'Add Author',
     'addbook' => 'Add Book',
     'addauthor' => 'Add Author',
     'editbook' => 'Edit Book',
@@ -16,8 +18,4 @@ return [
     'update' => 'Update',
     'backtobookslist' => 'Back to Books List',
     'backtoauthorslist' => 'Back to Authors List',
-    '' => '',
-    '' => '',
-    '' => '',
-    '' => '',
 ];
