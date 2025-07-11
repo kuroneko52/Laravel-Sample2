@@ -3,19 +3,19 @@
 @section('content')
     <div class="container">
         <div class="column">
-            <h1>Books List</h1>
-            <a href="{{ route('books.create') }}">本を追加</a>
+            <h1>{{ __('books.bookslist') }}</h1>
+            <a href="{{ route('books.create') }}">{{ __('books.addbooklink') }}</a>
             <div class="button-container-delete">
                 <ul>
                     <br><br>
                     @foreach ($books as $book)
                         <li>
                             {{ $book->title }} - {{ $book->author->name }}
-                            <a href="{{ route('books.edit', $book) }}" >Edit</a>
+                            <a href="{{ route('books.edit', $book) }}" >{{ __('books.edit') }}</a>
                             <form action="{{ route('books.destroy', $book) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Delete</button>
+                                <button type="submit">{{ __('books.delete') }}</button>
                             </form>
                         </li>
                     @endforeach
@@ -24,10 +24,10 @@
         </div>
 
         <div class="column">
-            <h1>Authors List</h1>
-            <a href="{{ route('authors.create') }}">作者を追加</a>
+            <h1>{{ __('books.authorslist') }}</h1>
+            <a href="{{ route('authors.create') }}">{{ __('books.addauthorlink') }}</a>
             <br>
-            <a href="{{ route('authors.index') }}">作者一覧</a>
+            <a href="{{ route('authors.index') }}">{{ __('books.authorslist') }}</a>
             <ul>
             <br>
                 @foreach ($authors as $author)
@@ -36,6 +36,16 @@
 
             </ul>
         </div>
+        
+        <div class='column'>
+            <h3>
+                {{ __('books.add') }}
+                <a href="{{ route('set.locale', ['locale' => 'ja']) }}">日本語</a>
+                <a href="{{ route('set.locale', ['locale' => 'en']) }}">English</a>
+            </h3>
+        </div>
+
+
     </div>
 @endsection
 

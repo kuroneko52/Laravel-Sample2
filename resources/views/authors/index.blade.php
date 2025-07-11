@@ -3,23 +3,23 @@
 @section('content')
     <div class="container">
         <div class="column">
-            <h1>Authors List</h1>
-            <a href="{{ route('authors.create') }}">作者を追加</a>
+            <h1>{{ __('authors.authorslist') }}</h1>
+            <a href="{{ route('authors.create') }}">{{ __('authors.addauthorlink') }}</a>
             <br>
-            <a href="{{ route('books.create') }}">本を追加</a>
+            <a href="{{ route('books.create') }}">{{ __('authors.addbooklink') }}</a>
             <br>
-            <a href="{{ route('books.index') }}">本の一覧</a>
+            <a href="{{ route('books.index') }}">{{ __('authors.bookslist') }}</a>
             <br><br>
             <div class="button-container-delete">
                 <ul>
                     @foreach ($authors as $author)
                         <li>
                             {{ $author->name }}
-                            <a href="{{ route('authors.edit', $author) }}">Edit</a>
+                            <a href="{{ route('authors.edit', $author) }}">{{ __('authors.edit') }}</a>
                             <form action="{{ route('authors.destroy', $author) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Delete</button>
+                                <button type="submit">{{ __('authors.delete') }}</button>
                             </form>
                         </li>
                         <ul>
